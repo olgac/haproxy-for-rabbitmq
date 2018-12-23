@@ -1,6 +1,6 @@
 version: "3.6"
 services:
-  rabbitmq:
+  haproxy:
     image: olgac/haproxy-for-rabbitmq:1.8.14-alpine
     ports:
       - 15672:15672
