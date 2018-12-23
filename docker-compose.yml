@@ -1,0 +1,15 @@
+version: "3.6"
+services:
+  rabbitmq:
+    image: olgac/haproxy-for-rabbitmq:1.8.14-alpine
+    ports:
+      - 15672:15672
+      - 5672:5672
+      - 1936:1936
+    networks:
+      - prod
+    deploy:
+      mode: global
+networks:
+  prod:
+    external: true
